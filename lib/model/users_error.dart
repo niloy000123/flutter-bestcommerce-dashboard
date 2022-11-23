@@ -1,5 +1,5 @@
-class UserError {
+class ServiceError {
   int? code;
   Object? message;
-  UserError({this.code, this.message});
+  ServiceError({this.code, this.message});
 }

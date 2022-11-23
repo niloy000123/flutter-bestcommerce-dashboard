@@ -1,7 +1,8 @@
 class Success {
   int? code;
   Object? responce;
-  Success({this.code, this.responce});
+  int? toatalPage;
+  Success({this.code, this.toatalPage, this.responce});
 }
 
 class Failure {

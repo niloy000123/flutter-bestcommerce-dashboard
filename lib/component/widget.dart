@@ -61,3 +61,20 @@ Padding headingText(String text) {
     ),
   );
 }
+
+Text normalText(
+    {required String text,
+    Color color = kTextColor,
+    double fontSize = 13,
+    TextAlign textAlign = TextAlign.center,
+    FontWeight fontWeight = FontWeight.normal}) {
+  return Text(
+    text,
+    textAlign: textAlign,
+    style: TextStyle(
+      fontWeight: fontWeight,
+      color: color,
+      fontSize: getProportionateScreenWidth(fontSize),
+    ),
+  );
+}

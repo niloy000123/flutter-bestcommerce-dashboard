@@ -30,6 +30,8 @@ final List<String> NAVIGATE_BOTTOM_IMAGES = [
   "assets/icons/Bell.svg"
 ];
 
+const IMAGE_NOT_FOUND = 'profile/no_img_found_2022_07_28T07_26_25_945Z.png';
+
 //error
 const USER_INVALID_RESPONSE = 100;
 const NO_INTERNATE = 101;

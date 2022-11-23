@@ -32,14 +32,6 @@ class HomeServices {
   static Future<Object> getFeaturedProduct(
       {bool isRefresh = false, int currentPage = 0, int totalPages = 0}) async {
     try {
-      if (isRefresh) {
-        currentPage = 1;
-      } else {
-        if (currentPage > totalPages) {
-          return false;
-        }
-      }
-
       Map<String, String> headers = {
         "Accept": "application/json",
         'Content-Type': 'application/json; charset=UTF-8',
@@ -53,7 +45,8 @@ class HomeServices {
         return Success(
             responce: (body['data'] as List)
                 .map((data) => FeaturedProduct.fromJson(data))
-                .toList());
+                .toList(),
+            toatalPage: body['pages']);
       }
       return Failure(
           code: USER_INVALID_RESPONSE, errorResponce: 'USER_INVALID_RESPONSE');
