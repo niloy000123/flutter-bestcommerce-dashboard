@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../component/bottom_navigate_card.dart';
+import '../../../component/widget.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/size_config.dart';
 import '../../../view_model/navigate_view_model.dart';
