@@ -1,16 +1,13 @@
-# flutter_bestcommerce_dashboard
+# Flutter E-commerce App Example With Provider
 
-A new Flutter project.
+## Development Setup
+Clone the repository and run the following commands:
+```
+flutter pub get
+flutter pub run build_runner build --delete-conflicting-outputs
+flutter run
+```
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/niloy000123/flutter-bestcommerce-home-login/blob/main/assets/screen_1.jpeg" width="400px" />
