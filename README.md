@@ -1,4 +1,4 @@
-# Flutter E-commerce App Example With Provider
+# Flutter E-commerce App Home page Example With Provider
 
 ## Development Setup
 Clone the repository and run the following commands:
