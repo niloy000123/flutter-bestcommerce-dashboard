@@ -63,9 +63,7 @@ class RecommandProductCard extends StatelessWidget {
                                                   Text('Image Not Available'));
                                         });
                                   });
-                            }
-                            // height: SizeConfig.screenWidth * .4,
-                            ),
+                            }),
                       ),
                     ),
                   ),
@@ -113,12 +111,12 @@ class RecommandProductCard extends StatelessWidget {
                           children: [
                             if (product!.newPrice != product!.price)
                               Text(
-                                product!.price.toString() + ' ',
+                                '${product!.price} ',
                                 style: const TextStyle(
                                     decoration: TextDecoration.lineThrough),
                               ),
                             Text(
-                              product!.newPrice.toString() + '\$',
+                              '${product!.newPrice}\$',
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontSize: getProportionateScreenWidth(15),
@@ -126,8 +124,6 @@ class RecommandProductCard extends StatelessWidget {
                             )
                           ],
                         )
-
-                        // Spacer(),
                       ],
                     ),
                   )),

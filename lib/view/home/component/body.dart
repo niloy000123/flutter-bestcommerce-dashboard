@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bestcommerce_dashboard/utils/size_config.dart';
+import 'package:flutter_bestcommerce_dashboard/view/home/component/categories.dart';
+import 'package:flutter_bestcommerce_dashboard/view/home/component/featured_category.dart';
+import 'package:flutter_bestcommerce_dashboard/view/home/component/offer_banner_pager.dart';
 import 'package:flutter_bestcommerce_dashboard/view/home/component/recommand_product.dart';
 import 'package:provider/provider.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -36,7 +40,6 @@ class _BodyState extends State<Body> {
           refreshController.loadComplete();
         } else {
           refreshController.loadComplete();
-          // refreshController.loadNoData();
         }
       },
       child: SingleChildScrollView(
@@ -44,23 +47,23 @@ class _BodyState extends State<Body> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //banner Image
-            // FutureBuilder(
-            //   future: fetchOfferBanner(),
-            //   builder: (context, AsyncSnapshot snapshot) => snapshot.hasData
-            //       ? OfferBannerPager(
-            //           model: snapshot.data,
-            //         )
-            //       : Center(child: Image.asset("assets/ripple.gif")),
-            // ),
+            OfferBannerPager(homeProvider: homeProvider),
+            SizedBox(
+              height: getProportionateScreenWidth(10),
+            ),
             // //category list
-            // const Categories(),
+            const Categories(),
+            SizedBox(
+              height: getProportionateScreenWidth(10),
+            ),
             // //featured product
-            // const FeaturedCategory(),
+            FeaturedCategory(homeProvider: homeProvider),
+            SizedBox(
+              height: getProportionateScreenWidth(15),
+            ),
             headingText("Featured Products"),
-            //products
-
             RecommandProducts(
-              product: homeProvider.productList,
+              homeProvider: homeProvider,
             ),
           ],
         ),

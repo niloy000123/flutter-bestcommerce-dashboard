@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bestcommerce_dashboard/utils/constants.dart';
 import 'package:flutter_bestcommerce_dashboard/view/home_pager/home_pager.dart';
 
 import '../utils/size_config.dart';
@@ -40,6 +41,15 @@ class CustomHomeAppBar extends StatelessWidget {
                 ),
               ),
             ),
+            const Spacer(),
+            Text(
+              'BESTCOMMERCE',
+              style: TextStyle(
+                  color: kPrimaryColor,
+                  fontSize: getProportionateScreenWidth(17),
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1),
+            )
           ],
         ),
       ),
